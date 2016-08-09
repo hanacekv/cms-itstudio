@@ -1,0 +1,10 @@
+{block content}
+<div id="banner">
+	<h1 n:block=title>{$article->title}</h1>
+</div>
+
+<p>
+    <img n:if="!empty($article->image_path)" src="{$basePath}/img/articles/{$article->image_path}" class="img-responsive img-rounded pull-right" style="margin:0 0 15px 15px; max-height: 250px;"/>
+    {!$article->text}
+</p>
+

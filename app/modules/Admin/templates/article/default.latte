@@ -1,0 +1,39 @@
+
+{block nav}
+    <p class="text-right"><a n:href="add" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>&nbspPřidat článek</a><p>
+{/block}
+
+{block header}
+    Články
+{/block}
+
+{block article}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Název</th>
+                <th>Obrázek</th>
+                <th>Viditelnost</th>
+                <th>Operace</th>
+        <thead>
+        <tbody>
+            <tr n:foreach="$articles as $article">
+                <td>{$article->id}</td>
+                <td>{$article->title}</td>
+                <td><img n:if="!empty($article->image_path)" src="{$basePath}/img/articles/{$article->image_path}" class="img-responsive" style="max-height: 180px;"></td>
+                <td>
+                    {if $article->visibility == 'public'}
+                        <a n:href="setPrivate! $article->id" ><span class="glyphicon glyphicon-eye-open"></span></a>
+                    {elseif $article->visibility == 'private'}
+                        <a n:href="setPublic! $article->id" ><span class="glyphicon glyphicon-eye-close"></span></a>
+                    {/if}
+                    </td>
+                <td>
+                    <a n:href="edit $article->id" title="upravit"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a n:href="delete! $article->id" title="smazat"><span class="glyphicon glyphicon-trash"></span></a>
+                </td>
+            </tr>
+        <tbody>
+    </table>
+

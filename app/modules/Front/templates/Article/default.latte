@@ -1,0 +1,18 @@
+{block content}
+<div id="banner">
+	<h1 n:block=title>Články</h1>
+</div>
+
+<div n:foreach="$articles as $article">
+    
+    <h2>{$article->title}</h2>
+    <p>
+        <img n:if="!empty($article->image_path)" src="{$basePath}/img/articles/{$article->image_path}" class="img-responsive img-rounded pull-right" style="max-height: 180px;" />
+        {!$article->text|truncate:200}
+    </p>
+    <p class="clearfix"></p>
+    <p class="text-right"><a n:href="detail $article->id"><span class="glyphicon glyphicon-hand-right"></span> Celý článek</a><p>
+    <hr>
+    
+</div>
+
