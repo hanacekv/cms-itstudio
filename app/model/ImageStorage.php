@@ -5,7 +5,9 @@ namespace App\Model;
 use Nette;
 use Nette\Utils\Image;
 
-class ImageStorage extends Nette\Object{
+class ImageStorage
+{
+    use Nette\SmartObject;
 	       
         protected $imgPath;
 

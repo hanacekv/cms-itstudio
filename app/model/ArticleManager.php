@@ -5,8 +5,10 @@ namespace App\Model;
 use Nette;
 use Nette\Database\Context;
 
-class ArticleManager extends Nette\Object
+class ArticleManager
 {
+    use Nette\SmartObject;
+
 	const
 		TABLE_NAME = 'articles',
 		COLUMN_ID = 'id',

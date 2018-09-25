@@ -8,8 +8,10 @@ use App\Model\ArticleManager;
 use App\Model\ImageStorage;
 
 
-class ArticleFormFactory extends Nette\Object
+class ArticleFormFactory
 {
+    use Nette\SmartObject;
+
         const
                 TYPE_ADD = 'add',
                 TYPE_EDIT = 'edit';

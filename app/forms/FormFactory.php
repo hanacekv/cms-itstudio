@@ -7,8 +7,9 @@ use Nette\Application\UI\Form;
 use Nette\Forms\Controls;
 
 
-class FormFactory extends Nette\Object
+class FormFactory
 {
+    use Nette\SmartObject;
 
 	/**
 	 * @return Form

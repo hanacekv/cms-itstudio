@@ -8,9 +8,11 @@ use App\Model\UserManager;
 use App\Model\DuplicateNameException;
 
 
-class AddUserFormFactory extends Nette\Object
+class AddUserFormFactory
 {
-	/** @var FormFactory */
+    use Nette\SmartObject;
+
+    /** @var FormFactory */
 	private $factory;
 
 	/** @var UserManager */
