@@ -1,3 +1,5 @@
+vendor
+
 app/config/config.local.neon
 # Windows image file caches
 Thumbs.db
