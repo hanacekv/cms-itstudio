@@ -16,9 +16,9 @@
                 <th>Operace</th>
         <thead>
         <tbody>
-            <tr n:foreach="$users as $id => $user">
+            <tr n:foreach="$users as $id => $username">
                 <td>{$id}</td>
-                <td>{$user}</td>
+                <td>{$username}</td>
                 <td>
                     <!--a n:href="edit $id" title="upravit"><span class="glyphicon glyphicon-edit"></span></a-->
                     <a n:href="delete $id" title="smazat"><span class="glyphicon glyphicon-trash"></span></a>
